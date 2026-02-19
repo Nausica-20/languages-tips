@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I 50 Verbi Inglesi Più Usati: Paradigma ed Esempi - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           RESET E VARIABILI
+           ========================================= */
+        :root {
+            --primary-color: #3f51b5; /* Blu indaco elegante */
+            --primary-hover: #303f9f; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --success: #1e88e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           HEADER & NAVIGAZIONE
+           ========================================= */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button-small {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button-small:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* =========================================
+           SEZIONE GRIGLIA / CONTENUTI
+           ========================================= */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-icon {
+            font-size: 1.2rem;
+        }
+
+        .item-positive {
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .item-positive:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-positive strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        .item-positive i {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+           CTA BOX (Inalterato)
+           ========================================= */
+        .cta-box-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .cta-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(63, 81, 181, 0.3);
+        }
+
+        .cta-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button-large {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* =========================================
+           FOOTER E DISCLOSURE (Inalterato)
+           ========================================= */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .affiliate-disclosure {
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            font-size: 0.8rem;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">🇬🇧 EnglishTips</a>
+        <a href="#offerta" class="cta-button-small">Lezione Gratis</a>
+    </header>
+
+    <section class="hero">
+        <h1>I 50 Verbi Inglesi <span>Più Usati</span></h1>
+        <p>Formano l'80% delle conversazioni quotidiane. Impara il loro paradigma (Base - Passato - Participio) e guardali in azione con esempi pratici.</p>
+        <a href="#contenuto" class="cta-button-small" style="background-color: #333;">Inizia a studiare 👇</a>
+    </section>
+
+    <section id="contenuto" class="content-container">
+        <div class="intro-text">
+            <h2>Il motore della lingua inglese</h2>
+            <p>Salva questa pagina. È la base assoluta della grammatica inglese che ti permetterà di costruire qualsiasi tipo di frase.</p>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-title">I Fondamentali (1-5) <span class="card-icon">🥇</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>1. Be - Was/Were - Been</strong> (Essere / Stare)<br><i>Ex: I am ready. (Sono pronto.)</i></span>
+                    <span class="item-positive"><strong>2. Have - Had - Had</strong> (Avere)<br><i>Ex: They have a car. (Hanno un'auto.)</i></span>
+                    <span class="item-positive"><strong>3. Do - Did - Done</strong> (Fare)<br><i>Ex: Just do it. (Fallo e basta.)</i></span>
+                    <span class="item-positive"><strong>4. Say - Said - Said</strong> (Dire)<br><i>Ex: He said yes. (Ha detto sì.)</i></span>
+                    <span class="item-positive"><strong>5. Get - Got - Got/Gotten</strong> (Ottenere / Diventare)<br><i>Ex: I got a new job. (Ho ottenuto un nuovo lavoro.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Azione e Creazione (6-10) <span class="card-icon">🏗️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>6. Make - Made - Made</strong> (Fare / Creare)<br><i>Ex: She made a cake. (Ha fatto una torta.)</i></span>
+                    <span class="item-positive"><strong>7. Go - Went - Gone</strong> (Andare)<br><i>Ex: We went home. (Siamo andati a casa.)</i></span>
+                    <span class="item-positive"><strong>8. Know - Knew - Known</strong> (Sapere / Conoscere)<br><i>Ex: I know the truth. (Conosco la verità.)</i></span>
+                    <span class="item-positive"><strong>9. Take - Took - Taken</strong> (Prendere)<br><i>Ex: Take your time. (Prenditi il tuo tempo.)</i></span>
+                    <span class="item-positive"><strong>10. See - Saw - Seen</strong> (Vedere)<br><i>Ex: I saw him yesterday. (L'ho visto ieri.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Arrivare e Pensare (11-15) <span class="card-icon">💡</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>11. Come - Came - Come</strong> (Venire)<br><i>Ex: Come here! (Vieni qui!)</i></span>
+                    <span class="item-positive"><strong>12. Think - Thought - Thought</strong> (Pensare)<br><i>Ex: I think so. (Penso di sì.)</i></span>
+                    <span class="item-positive"><strong>13. Look - Looked - Looked</strong> (Guardare / Sembrare)<br><i>Ex: Look at that! (Guarda quello!)</i></span>
+                    <span class="item-positive"><strong>14. Want - Wanted - Wanted</strong> (Volere)<br><i>Ex: I want an apple. (Voglio una mela.)</i></span>
+                    <span class="item-positive"><strong>15. Give - Gave - Given</strong> (Dare)<br><i>Ex: Give me a hand. (Dammi una mano.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Uso e Ricerca (16-20) <span class="card-icon">🔍</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>16. Use - Used - Used</strong> (Usare)<br><i>Ex: Can I use your phone? (Posso usare il tuo telefono?)</i></span>
+                    <span class="item-positive"><strong>17. Find - Found - Found</strong> (Trovare)<br><i>Ex: I found my keys. (Ho trovato le mie chiavi.)</i></span>
+                    <span class="item-positive"><strong>18. Tell - Told - Told</strong> (Raccontare / Dire a qlcn)<br><i>Ex: Tell me a story. (Raccontami una storia.)</i></span>
+                    <span class="item-positive"><strong>19. Ask - Asked - Asked</strong> (Chiedere / Domandare)<br><i>Ex: Can I ask a question? (Posso fare una domanda?)</i></span>
+                    <span class="item-positive"><strong>20. Work - Worked - Worked</strong> (Lavorare / Funzionare)<br><i>Ex: It works perfectly. (Funziona perfettamente.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Percezione e Azione (21-25) <span class="card-icon">❤️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>21. Seem - Seemed - Seemed</strong> (Sembrare)<br><i>Ex: It seems okay. (Sembra a posto.)</i></span>
+                    <span class="item-positive"><strong>22. Feel - Felt - Felt</strong> (Sentire / Provare)<br><i>Ex: I feel good. (Mi sento bene.)</i></span>
+                    <span class="item-positive"><strong>23. Try - Tried - Tried</strong> (Provare / Tentare)<br><i>Ex: Try again. (Riprova.)</i></span>
+                    <span class="item-positive"><strong>24. Leave - Left - Left</strong> (Lasciare / Partire)<br><i>Ex: They left early. (Sono partiti presto.)</i></span>
+                    <span class="item-positive"><strong>25. Call - Called - Called</strong> (Chiamare)<br><i>Ex: Call me later. (Chiamami più tardi.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Mantenere e Iniziare (26-30) <span class="card-icon">🏁</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>26. Keep - Kept - Kept</strong> (Tenere / Mantenere)<br><i>Ex: Keep the change. (Tieni il resto.)</i></span>
+                    <span class="item-positive"><strong>27. Hold - Held - Held</strong> (Tenere in mano / Trattenere)<br><i>Ex: Hold the door. (Tieni la porta.)</i></span>
+                    <span class="item-positive"><strong>28. Turn - Turned - Turned</strong> (Girare / Diventare)<br><i>Ex: Turn right. (Gira a destra.)</i></span>
+                    <span class="item-positive"><strong>29. Follow - Followed - Followed</strong> (Seguire)<br><i>Ex: Follow me. (Seguimi.)</i></span>
+                    <span class="item-positive"><strong>30. Begin - Began - Begun</strong> (Iniziare)<br><i>Ex: The show begins now. (Lo show inizia ora.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Portare e Aiutare (31-35) <span class="card-icon">🤝</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>31. Bring - Brought - Brought</strong> (Portare verso chi parla)<br><i>Ex: Bring me water. (Portami dell'acqua.)</i></span>
+                    <span class="item-positive"><strong>32. Like - Liked - Liked</strong> (Piacere)<br><i>Ex: I like this song. (Mi piace questa canzone.)</i></span>
+                    <span class="item-positive"><strong>33. Help - Helped - Helped</strong> (Aiutare)<br><i>Ex: Can you help me? (Puoi aiutarmi?)</i></span>
+                    <span class="item-positive"><strong>34. Start - Started - Started</strong> (Iniziare / Avviare)<br><i>Ex: The match started. (La partita è iniziata.)</i></span>
+                    <span class="item-positive"><strong>35. Run - Ran - Run</strong> (Correre / Gestire un'attività)<br><i>Ex: Run fast! (Corri veloce!)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Scrivere e Muovere (36-40) <span class="card-icon">✍️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>36. Write - Wrote - Written</strong> (Scrivere)<br><i>Ex: Write your name here. (Scrivi qui il tuo nome.)</i></span>
+                    <span class="item-positive"><strong>37. Set - Set - Set</strong> (Impostare / Posizionare)<br><i>Ex: Set the alarm. (Imposta la sveglia.)</i></span>
+                    <span class="item-positive"><strong>38. Move - Moved - Moved</strong> (Muovere / Spostarsi)<br><i>Ex: Don't move! (Non ti muovere!)</i></span>
+                    <span class="item-positive"><strong>39. Play - Played - Played</strong> (Giocare / Suonare)<br><i>Ex: Play the guitar. (Suona la chitarra.)</i></span>
+                    <span class="item-positive"><strong>40. Pay - Paid - Paid</strong> (Pagare)<br><i>Ex: I'll pay the bill. (Pagherò io il conto.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Ascoltare e Credere (41-45) <span class="card-icon">👂</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>41. Hear - Heard - Heard</strong> (Udire)<br><i>Ex: Did you hear that? (Hai sentito?)</i></span>
+                    <span class="item-positive"><strong>42. Include - Included - Included</strong> (Includere)<br><i>Ex: Tax is included. (Le tasse sono incluse.)</i></span>
+                    <span class="item-positive"><strong>43. Believe - Believed - Believed</strong> (Credere)<br><i>Ex: I believe you. (Ti credo.)</i></span>
+                    <span class="item-positive"><strong>44. Allow - Allowed - Allowed</strong> (Permettere)<br><i>Ex: Dogs are not allowed. (I cani non sono ammessi.)</i></span>
+                    <span class="item-positive"><strong>45. Meet - Met - Met</strong> (Incontrare / Conoscere)<br><i>Ex: Nice to meet you. (Piacere di conoscerti.)</i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Vivere e Concludere (46-50) <span class="card-icon">🏡</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>46. Lead - Led - Led</strong> (Condurre / Guidare)<br><i>Ex: Lead the way. (Fai strada.)</i></span>
+                    <span class="item-positive"><strong>47. Live - Lived - Lived</strong> (Vivere)<br><i>Ex: I live in Italy. (Vivo in Italia.)</i></span>
+                    <span class="item-positive"><strong>48. Stand - Stood - Stood</strong> (Stare in piedi / Sopportare)<br><i>Ex: Stand up, please. (Alzati, per favore.)</i></span>
+                    <span class="item-positive"><strong>49. Happen - Happened - Happened</strong> (Succedere / Accadere)<br><i>Ex: What happened? (Cosa è successo?)</i></span>
+                    <span class="item-positive"><strong>50. Stop - Stopped - Stopped</strong> (Fermare / Smettere)<br><i>Ex: Stop talking. (Smettila di parlare.)</i></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offerta" class="cta-box-container">
+        <div class="cta-box">
+            <h2>Vuoi padroneggiare l'inglese vero?</h2>
+            <p>Inizia ad esprimerti con la sicurezza di un native speaker. Scopri il metodo <strong>Babbel</strong> e impara al tuo ritmo, con lezioni pratiche e basate su conversazioni reali.</p>
+            <a href="#" class="cta-button-large">Prova la tua prima lezione GRATIS su Babbel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Tutti i diritti riservati.</p>
+        <p class="affiliate-disclosure"><strong>Avviso di trasparenza:</strong> I link verso piattaforme di apprendimento presenti in questa pagina potrebbero essere link di affiliazione. Ciò significa che, se decidi di attivare una prova o acquistare un servizio su piattaforme come Babbel, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il sito gratuito. Grazie!</p>
+    </footer>
+
+</body>
+</html>
