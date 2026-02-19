@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imparare l'Inglese: Guide e Risorse - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           RESET E VARIABILI
+           ========================================= */
+        :root {
+            --primary-color: #3f51b5; 
+            --primary-hover: #303f9f; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --success: #1e88e5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+        /* =========================================
+           HEADER (Link alla Home principale con ../)
+           ========================================= */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button-small {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 100%);
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero h1 span { color: var(--primary-color); }
+        .hero p { font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto 30px auto; }
+
+        /* =========================================
+           GRID ARTICOLI INGLESE
+           ========================================= */
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card-title { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .card-desc { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .read-more-link { font-weight: 700; color: var(--primary-color); text-decoration: none; font-size: 0.9rem; }
+
+        /* =========================================
+           CTA BOX (INALTERATO)
+           ========================================= */
+        .cta-box-container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .cta-box { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 60px 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(63, 81, 181, 0.3); }
+        .cta-box h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .cta-box p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-button-large { background-color: var(--white); color: var(--primary-color); padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block; }
+
+        /* =========================================
+           FOOTER (INALTERATO)
+           ========================================= */
+        footer { background-color: var(--white); text-align: center; padding: 40px 20px; font-size: 0.9rem; color: var(--text-light); border-top: 1px solid #e0e0e0; }
+        .affiliate-disclosure { max-width: 800px; margin: 15px auto 0 auto; font-size: 0.8rem; color: #999; line-height: 1.5; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">🇬🇧 EnglishTips</a>
+        <a href="#offerta" class="cta-button-small">Lezione Gratis</a>
+    </header>
+
+    <section class="hero">
+        <h1>Risorse Premium per l'<span>Inglese</span></h1>
+        <p>Approfondimenti grammaticali, cultura e consigli pratici per dominare la lingua più importante del mondo.</p>
+    </section>
+
+    <section class="content-container">
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-title">Metodo Grammaticale 📚</div>
+                <p class="card-desc">Come Babbel ti insegna la grammatica in modo intuitivo, senza noiose liste di regole a memoria.</p>
+                <a href="metodo-grammatica-babbel.html" class="read-more-link">Scopri il metodo &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Countable & Uncountable 🍎</div>
+                <p class="card-desc">Water o waters? Advice o advices? La guida definitiva ai nomi numerabili e non numerabili.</p>
+                <a href="countable-uncountable.html" class="read-more-link">Impara le regole &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Grammatica per Italiani 🇮🇹</div>
+                <p class="card-desc">Dalle preposizioni al Present Perfect: le regole più ostiche per noi e come superarle facilmente.</p>
+                <a href="grammatica-difficile-italiani.html" class="read-more-link">Evita gli errori &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Gastronomia Inglese 🥧</div>
+                <p class="card-desc">Non solo Fish & Chips: esplora i sapori del Regno Unito attraverso i corsi tematici di Babbel.</p>
+                <a href="gastronomia-inglese-babbel.html" class="read-more-link">Assapora la lingua &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Cultura & Lifestyle ☕</div>
+                <p class="card-desc">Dalle buone maniere al pub etiquette: impara a comportarti come un vero local grazie a Babbel.</p>
+                <a href="cultura-inglese-babbel.html" class="read-more-link">Vivi la cultura &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Perché studiare l'inglese 🚀</div>
+                <p class="card-desc">Scopri come la lingua universale può cambiare radicalmente le tue opportunità personali e professionali.</p>
+                <a href="perche-studiare-inglese.html" class="read-more-link">Leggi di più &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Business English 💼</div>
+                <p class="card-desc">Come scrivere email professionali, gestire meeting e negoziare in un contesto aziendale internazionale.</p>
+                <a href="business-english.html" class="read-more-link">Migliora la carriera &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">30 Parole Poetiche ✨</div>
+                <p class="card-desc">Serendipity, Petrichor e altre parole intraducibili che rendono l'inglese una lingua meravigliosa.</p>
+                <a href="parole-poetiche.html" class="read-more-link">Scopri i significati &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">50 Frasi per Viaggiatori 🧳</div>
+                <p class="card-desc">Il kit di sopravvivenza essenziale: le frasi fatte che ti salveranno in ogni situazione all'estero.</p>
+                <a href="50-frasi-viaggio.html" class="read-more-link">Scarica la lista &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">I 50 Verbi più usati 📝</div>
+                <p class="card-desc">Paradigma completo, traduzione ed esempi pratici per i verbi che costituiscono l'80% delle conversazioni.</p>
+                <a href="50-verbi-fondamentali.html" class="read-more-link">Studia i verbi &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Phrasal Verbs ⚡</div>
+                <p class="card-desc">Smetti di averne paura! Una guida chiara per capire i verbi frasali più comuni nel parlato quotidiano.</p>
+                <a href="guida-phrasal-verbs.html" class="read-more-link">Impara le regole &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Guida alla Pronuncia 🗣️</div>
+                <p class="card-desc">I suoni più difficili per noi italiani (come il "th") e come correggerli per non farsi fraintendere.</p>
+                <a href="pronuncia-per-italiani.html" class="read-more-link">Ascolta i consigli &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">UK vs USA ⚔️</div>
+                <p class="card-desc">Cookies o Biscuits? Chips o Fries? Scopri le differenze principali tra inglese britannico e americano.</p>
+                <a href="britannico-vs-americano.html" class="read-more-link">Guarda le differenze &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Dove si parla inglese 🗺️</div>
+                <p class="card-desc">Non solo UK e USA: un viaggio attraverso i paesi dove l'inglese è lingua ufficiale o dominante.</p>
+                <a href="dove-si-parla-inglese.html" class="read-more-link">Esplora la mappa &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Vantaggi in Viaggio ✈️</div>
+                <p class="card-desc">Sapersi muovere in aeroporti, hotel e ristoranti senza barriere linguistiche cambia la tua esperienza.</p>
+                <a href="inglese-per-viaggiare.html" class="read-more-link">Viaggia sereno &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offerta" class="cta-box-container">
+        <div class="cta-box">
+            <h2>Vuoi padroneggiare l'inglese vero?</h2>
+            <p>Inizia ad esprimerti con la sicurezza di un native speaker. Scopri il metodo <strong>Babbel</strong> e impara al tuo ritmo, con lezioni pratiche e basate su conversazioni reali.</p>
+            <a href="#" class="cta-button-large">Prova la tua prima lezione GRATIS su Babbel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Tutti i diritti riservati.</p>
+        <p class="affiliate-disclosure"><strong>Avviso di trasparenza:</strong> I link verso piattaforme di apprendimento presenti in questa pagina potrebbero essere link di affiliazione. Ciò significa che, se decidi di attivare una prova o acquistare un servizio su piattaforme come Babbel, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il sito gratuito. Grazie!</p>
+    </footer>
+
+</body>
+  </html>
+  
