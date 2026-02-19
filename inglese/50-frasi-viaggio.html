@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Frasi in Inglese per Viaggiare - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           RESET E VARIABILI
+           ========================================= */
+        :root {
+            --primary-color: #3f51b5; /* Blu indaco elegante */
+            --primary-hover: #303f9f; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --success: #1e88e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           HEADER & NAVIGAZIONE
+           ========================================= */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button-small {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button-small:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* =========================================
+           SEZIONE GRIGLIA / CONTENUTI
+           ========================================= */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-icon {
+            font-size: 1.2rem;
+        }
+
+        .item-positive {
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .item-positive:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-positive strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 1.05rem;
+        }
+
+        /* =========================================
+           CTA BOX (Inalterato)
+           ========================================= */
+        .cta-box-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .cta-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(63, 81, 181, 0.3);
+        }
+
+        .cta-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button-large {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* =========================================
+           FOOTER E DISCLOSURE (Inalterato)
+           ========================================= */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .affiliate-disclosure {
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            font-size: 0.8rem;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">🇬🇧 EnglishTips</a>
+        <a href="#offerta" class="cta-button-small">Lezione Gratis</a>
+    </header>
+
+    <section class="hero">
+        <h1>Inglese in Viaggio: le <span>50 Frasi Essenziali</span></h1>
+        <p>Il tuo kit di sopravvivenza completo. Fatti capire in aeroporto, hotel, ristorante e nelle emergenze ovunque nel mondo senza stress.</p>
+        <a href="#contenuto" class="cta-button-small" style="background-color: #333;">Salva queste 50 frasi 👇</a>
+    </section>
+
+    <section id="contenuto" class="content-container">
+        <div class="intro-text">
+            <h2>Niente panico, basta questa lista</h2>
+            <p>Abbiamo suddiviso esattamente 50 espressioni chiave nelle situazioni più comuni in cui ti troverai all'estero. Mettila nei preferiti!</p>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-title">In Aeroporto & Volo <span class="card-icon">✈️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>1. Here is my passport and boarding pass.</strong> (Ecco il mio passaporto e la carta d'imbarco.)</span>
+                    <span class="item-positive"><strong>2. Where is the baggage drop-off?</strong> (Dov'è la consegna bagagli?)</span>
+                    <span class="item-positive"><strong>3. Which gate is for the flight to London?</strong> (Qual è il gate per il volo per Londra?)</span>
+                    <span class="item-positive"><strong>4. Is the flight delayed?</strong> (Il volo è in ritardo?)</span>
+                    <span class="item-positive"><strong>5. I have a connecting flight.</strong> (Ho un volo in coincidenza.)</span>
+                    <span class="item-positive"><strong>6. Where can I claim my luggage?</strong> (Dove posso ritirare i bagagli?)</span>
+                    <span class="item-positive"><strong>7. My luggage is missing.</strong> (Il mio bagaglio è stato smarrito.)</span>
+                    <span class="item-positive"><strong>8. Can I bring this on the plane?</strong> (Posso portarlo sull'aereo?)</span>
+                    <span class="item-positive"><strong>9. Could I have some water, please?</strong> (Potrei avere dell'acqua in aereo, per favore?)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">In Hotel <span class="card-icon">🏨</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>10. I have a reservation under the name...</strong> (Ho una prenotazione a nome...)</span>
+                    <span class="item-positive"><strong>11. Do you have any rooms available?</strong> (Avete camere disponibili?)</span>
+                    <span class="item-positive"><strong>12. What time is check-in / check-out?</strong> (A che ora è il check-in / check-out?)</span>
+                    <span class="item-positive"><strong>13. Is breakfast included in the price?</strong> (La colazione è inclusa nel prezzo?)</span>
+                    <span class="item-positive"><strong>14. Could I have a late check-out?</strong> (Potrei fare il check-out posticipato?)</span>
+                    <span class="item-positive"><strong>15. The Wi-Fi doesn't work. What's the password?</strong> (Il Wi-Fi non funziona. Qual è la password?)</span>
+                    <span class="item-positive"><strong>16. Could I get some extra towels?</strong> (Potrei avere degli asciugamani in più?)</span>
+                    <span class="item-positive"><strong>17. My room hasn't been cleaned.</strong> (La mia camera non è stata pulita.)</span>
+                    <span class="item-positive"><strong>18. Can you book a taxi for me tomorrow morning?</strong> (Può prenotarmi un taxi per domani mattina?)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Al Ristorante <span class="card-icon">🍽️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>19. A table for two, please.</strong> (Un tavolo per due, per favore.)</span>
+                    <span class="item-positive"><strong>20. Could we have the menu, please?</strong> (Potremmo avere il menu?)</span>
+                    <span class="item-positive"><strong>21. Do you have a menu in English?</strong> (Avete un menu in inglese?)</span>
+                    <span class="item-positive"><strong>22. I am allergic to peanuts / dairy.</strong> (Sono allergico alle arachidi / latticini.)</span>
+                    <span class="item-positive"><strong>23. What do you recommend?</strong> (Cosa consiglia?)</span>
+                    <span class="item-positive"><strong>24. I'll have the steak, please.</strong> (Prendo la bistecca, per favore.)</span>
+                    <span class="item-positive"><strong>25. Could I have a glass of tap water?</strong> (Potrei avere un bicchiere d'acqua del rubinetto?)</span>
+                    <span class="item-positive"><strong>26. Everything was delicious, thank you.</strong> (Era tutto delizioso, grazie.)</span>
+                    <span class="item-positive"><strong>27. Can we have the bill / check, please?</strong> (Possiamo avere il conto, per favore?)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Direzioni & Trasporti <span class="card-icon">🗺️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>28. Excuse me, how do I get to the city center?</strong> (Scusi, come arrivo in centro?)</span>
+                    <span class="item-positive"><strong>29. Where is the nearest subway station?</strong> (Dov'è la fermata metro più vicina?)</span>
+                    <span class="item-positive"><strong>30. Is this the right bus for the museum?</strong> (È l'autobus giusto per il museo?)</span>
+                    <span class="item-positive"><strong>31. How much is a ticket to...?</strong> (Quanto costa un biglietto per...?)</span>
+                    <span class="item-positive"><strong>32. I'd like to buy a round-trip ticket.</strong> (Vorrei comprare un biglietto di and/rit.)</span>
+                    <span class="item-positive"><strong>33. Could you show me on the map?</strong> (Può mostrarmelo sulla mappa?)</span>
+                    <span class="item-positive"><strong>34. How far is it from here?</strong> (Quanto dista da qui?)</span>
+                    <span class="item-positive"><strong>35. Is it within walking distance?</strong> (Si può raggiungere a piedi?)</span>
+                    <span class="item-positive"><strong>36. Please, take me to this address.</strong> (Per favore, mi porti a questo indirizzo.)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Shopping & Denaro <span class="card-icon">🛍️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>37. How much does this cost?</strong> (Quanto costa questo?)</span>
+                    <span class="item-positive"><strong>38. Do you accept credit cards or cash only?</strong> (Accettate carte di credito o solo contanti?)</span>
+                    <span class="item-positive"><strong>39. Can I try this on? Where are the fitting rooms?</strong> (Posso provarlo? Dove sono i camerini?)</span>
+                    <span class="item-positive"><strong>40. Do you have this in a different size / color?</strong> (Ce l'avete di una taglia / colore diverso?)</span>
+                    <span class="item-positive"><strong>41. I'm just looking, thank you.</strong> (Sto solo dando un'occhiata, grazie.)</span>
+                    <span class="item-positive"><strong>42. Where is the nearest ATM?</strong> (Dov'è il bancomat più vicino?)</span>
+                    <span class="item-positive"><strong>43. Can I get a receipt, please?</strong> (Posso avere la ricevuta, per favore?)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Emergenze & Cortesia <span class="card-icon">🚨</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>44. Excuse me, do you speak English?</strong> (Mi scusi, parla inglese?)</span>
+                    <span class="item-positive"><strong>45. Could you speak more slowly, please?</strong> (Potrebbe parlare più lentamente, per favore?)</span>
+                    <span class="item-positive"><strong>46. I don't understand. Could you repeat that?</strong> (Non capisco. Potrebbe ripetere?)</span>
+                    <span class="item-positive"><strong>47. I need help. I'm lost.</strong> (Ho bisogno di aiuto. Mi sono perso.)</span>
+                    <span class="item-positive"><strong>48. I need a doctor / an ambulance.</strong> (Ho bisogno di un medico / un'ambulanza.)</span>
+                    <span class="item-positive"><strong>49. Where is the restroom / toilet?</strong> (Dov'è il bagno?)</span>
+                    <span class="item-positive"><strong>50. Thank you very much for your help.</strong> (Grazie mille per il suo aiuto.)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offerta" class="cta-box-container">
+        <div class="cta-box">
+            <h2>Vuoi padroneggiare l'inglese vero?</h2>
+            <p>Inizia ad esprimerti con la sicurezza di un native speaker. Scopri il metodo <strong>Babbel</strong> e impara al tuo ritmo, con lezioni pratiche e basate su conversazioni reali.</p>
+            <a href="#" class="cta-button-large">Prova la tua prima lezione GRATIS su Babbel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Tutti i diritti riservati.</p>
+        <p class="affiliate-disclosure"><strong>Avviso di trasparenza:</strong> I link verso piattaforme di apprendimento presenti in questa pagina potrebbero essere link di affiliazione. Ciò significa che, se decidi di attivare una prova o acquistare un servizio su piattaforme come Babbel, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il sito gratuito. Grazie!</p>
+    </footer>
+
+</body>
+</html>
