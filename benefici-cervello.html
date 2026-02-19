@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Benefici delle Lingue sul Cervello - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           RESET E VARIABILI
+           ========================================= */
+        :root {
+            --primary-color: #3f51b5; /* Blu indaco elegante */
+            --primary-hover: #303f9f; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --success: #1e88e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           HEADER & NAVIGAZIONE
+           ========================================= */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button-small {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button-small:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* =========================================
+           SEZIONE GRIGLIA / CONTENUTI
+           ========================================= */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-icon {
+            font-size: 1.2rem;
+        }
+
+        .item-positive {
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 1.05rem;
+            display: block;
+        }
+
+        .item-positive strong {
+            color: var(--success);
+        }
+
+        /* =========================================
+           CTA BOX (Prima del Footer)
+           ========================================= */
+        .cta-box-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .cta-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(63, 81, 181, 0.3);
+        }
+
+        .cta-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button-large {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* =========================================
+           FOOTER E DISCLOSURE AFFILIATO
+           ========================================= */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .affiliate-disclosure {
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            font-size: 0.8rem;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+            .cta-box h2 { font-size: 1.8rem; }
+            .cta-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">🇬🇧 EnglishTips</a>
+        <a href="#offerta" class="cta-button-small">Lezione Gratis</a>
+    </header>
+
+    <section class="hero">
+        <h1>Allena il tuo <span>Cervello</span> con le Lingue</h1>
+        <p>Imparare una nuova lingua non arricchisce solo il tuo vocabolario. Modifica fisicamente la struttura del tuo cervello, mantenendolo giovane, reattivo e brillante.</p>
+        <a href="#contenuto" class="cta-button-small" style="background-color: #333;">Scopri la scienza 👇</a>
+    </section>
+
+    <section id="contenuto" class="content-container">
+        <div class="intro-text">
+            <h2>I Superpoteri Cognitivi del Bilinguismo</h2>
+            <p>Ecco cosa dice la neuroscienza sui vantaggi tangibili di parlare più di una lingua nel corso della vita.</p>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-title">Neuroplasticità <span class="card-icon">🧠</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>Una Palestra per la Mente:</strong> Studiare vocaboli e regole grammaticali stimola il cervello a creare nuove reti neurali. Questo processo aumenta letteralmente il volume della materia grigia nelle aree deputate all'apprendimento e alla memoria. Il tuo cervello diventa più denso e forte.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Prevenzione Cognitiva <span class="card-icon">🛡️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>Scudo contro l'Invecchiamento:</strong> Numerosi studi scientifici dimostrano che il bilinguismo aiuta a ritardare l'insorgenza dei sintomi dell'Alzheimer e della demenza senile di circa 4-5 anni rispetto alle persone monolingua. È una delle migliori "polizze assicurative" per la tua mente.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Multitasking <span class="card-icon">🤹</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>Focus di Ferro:</strong> Chi parla più lingue allena costantemente il cervello a ignorare la lingua che non sta usando. Questo sforzo invisibile migliora le funzioni esecutive: sarai molto più veloce nel passare da un compito all'altro e nel filtrare le distrazioni esterne durante il lavoro.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Decision-Making <span class="card-icon">⚖️</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>Scelte più Razionali:</strong> Ricerche dimostrano che quando pensiamo o prendiamo decisioni in una lingua straniera, tendiamo a ridurre i pregiudizi e le reazioni puramente emotive. L'elaborazione logica prende il sopravvento, portando a scelte finanziarie e personali più ponderate.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offerta" class="cta-box-container">
+        <div class="cta-box">
+            <h2>Vuoi padroneggiare l'inglese vero?</h2>
+            <p>Inizia ad esprimerti con la sicurezza di un native speaker. Scopri il metodo <strong>Babbel</strong> e impara al tuo ritmo, con lezioni pratiche e basate su conversazioni reali.</p>
+            <a href="#" class="cta-button-large">Prova la tua prima lezione GRATIS su Babbel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Tutti i diritti riservati.</p>
+        <p class="affiliate-disclosure"><strong>Avviso di trasparenza:</strong> I link verso piattaforme di apprendimento presenti in questa pagina potrebbero essere link di affiliazione. Ciò significa che, se decidi di attivare una prova o acquistare un servizio su piattaforme come Babbel, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il sito gratuito. Grazie!</p>
+    </footer>
+
+</body>
+</html>
