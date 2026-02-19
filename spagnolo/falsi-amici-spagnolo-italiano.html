@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Falsi Amici Spagnolo-Italiano: Guida per non sbagliare - SpanishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           RESET E VARIABILI
+           ========================================= */
+        :root {
+            --primary-color: #3f51b5; /* Blu indaco elegante */
+            --primary-hover: #303f9f; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --success: #1e88e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           HEADER & NAVIGAZIONE
+           ========================================= */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button-small {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* =========================================
+           SEZIONE GRIGLIA / CONTENUTI
+           ========================================= */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .item-positive {
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .item-positive:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-positive strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        /* =========================================
+           CTA BOX (Inalterato)
+           ========================================= */
+        .cta-box-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .cta-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(63, 81, 181, 0.3);
+        }
+
+        .cta-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button-large {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-large:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* =========================================
+           FOOTER E DISCLOSURE (Inalterato)
+           ========================================= */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .affiliate-disclosure {
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            font-size: 0.8rem;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">🇪🇸 SpanishTips</a>
+        <a href="#offerta" class="cta-button-small">Lezione Gratis</a>
+    </header>
+
+    <section class="hero">
+        <h1>I "Falsi Amici" <span>più Ingannevoli</span></h1>
+        <p>Spagnolo e Italiano sono lingue sorelle, ma a volte giocano brutti scherzi. Scopri i 20 termini che sembrano dire una cosa e invece ne significano un'altra del tutto inaspettata.</p>
+        <a href="#contenuto" class="cta-button-small" style="background-color: #333;">Attento a questi termini 👇</a>
+    </section>
+
+    <section id="contenuto" class="content-container">
+        <div class="intro-text">
+            <h2>Non farti ingannare dalla somiglianza</h2>
+            <p>Ecco la lista definitiva per evitare imbarazzi e migliorare la tua precisione linguistica da subito.</p>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-title">Incidenti a Tavola <span class="card-icon">🍲</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>1. Burro</strong> In spagnolo è l'asino! Se vuoi il burro, chiedi la <i>mantequilla</i>.</span>
+                    <span class="item-positive"><strong>2. Caldo</strong> Significa brodo. Per dire che fa caldo, usa <i>calor</i>.</span>
+                    <span class="item-positive"><strong>3. Vaso</strong> È il bicchiere d'acqua. Il vaso da fiori si chiama <i>florero</i>.</span>
+                    <span class="item-positive"><strong>4. Aceite</strong> Non è l'aceto (<i>vinagre</i>), ma l'olio!</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Verbi Traditori <span class="card-icon">⚡</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>5. Salir</strong> Significa uscire, non salire (che si dice <i>subir</i>).</span>
+                    <span class="item-positive"><strong>6. Subir</strong> Significa salire, non subire (che si dice <i>padecer</i> o <i>sufrir</i>).</span>
+                    <span class="item-positive"><strong>7. Guardar</strong> Significa conservare o mettere via, non guardare (<i>mirar</i>).</span>
+                    <span class="item-positive"><strong>8. Discutir</strong> Significa litigare animatamente, non una semplice discussione pacata.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Aggettivi Pericolosi <span class="card-icon">👤</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>9. Embarazada</strong> Attenzione! Significa incinta. Per dire "imbarazzata", usa <i>avergonzada</i>.</span>
+                    <span class="item-positive"><strong>10. Largo</strong> Significa lungo. Per dire largo, usa <i>ancho</i>.</span>
+                    <span class="item-positive"><strong>11. Pronto</strong> Significa presto. Per dire che sei pronto, usa <i>listo</i>.</span>
+                    <span class="item-positive"><strong>12. Curioso</strong> Spesso usato per dire "strano" o "particolare".</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Oggetti e Tempo <span class="card-icon">⏰</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>13. Carta</strong> È la lettera che spedisci o il menu. Il materiale si chiama <i>papel</i>.</span>
+                    <span class="item-positive"><strong>14. Todavía</strong> Significa ancora, non tuttavia (che si dice <i>sin embargo</i>).</span>
+                    <span class="item-positive"><strong>15. Habitación</strong> È la camera da letto, non l'abitazione intera (<i>vivienda</i>).</span>
+                    <span class="item-positive"><strong>16. Espalda</strong> Significa schiena, non spalla (<i>hombro</i>).</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Gli Ultimi "Amici" <span class="card-icon">🚩</span></div>
+                <div class="card-details">
+                    <span class="item-positive"><strong>17. Oficina</strong> È l'ufficio. L'officina meccanica si chiama <i>taller</i>.</span>
+                    <span class="item-positive"><strong>18. Apellido</strong> Significa cognome, non appello (<i>llamada</i>).</span>
+                    <span class="item-positive"><strong>19. Éxito</strong> Significa successo. L'uscita di sicurezza è l'<i>salida</i>.</span>
+                    <span class="item-positive"><strong>20. Equipaje</strong> È il bagaglio. L'equipaggio di una nave è la <i>tripulación</i>.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="offerta" class="cta-box-container">
+        <div class="cta-box">
+            <h2>Vuoi padroneggiare l'inglese vero?</h2>
+            <p>Inizia ad esprimerti con la sicurezza di un native speaker. Scopri il metodo <strong>Babbel</strong> e impara al tuo ritmo, con lezioni pratiche e basate su conversazioni reali.</p>
+            <a href="#" class="cta-button-large">Prova la tua prima lezione GRATIS su Babbel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Tutti i diritti riservati.</p>
+        <p class="affiliate-disclosure"><strong>Avviso di trasparenza:</strong> I link verso piattaforme di apprendimento presenti in questa pagina potrebbero essere link di affiliazione. Ciò significa che, se decidi di attivare una prova o acquistare un servizio su piattaforme come Babbel, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il sito gratuito. Grazie!</p>
+    </footer>
+
+</body>
+</html>
